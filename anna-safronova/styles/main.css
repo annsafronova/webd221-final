@@ -1,0 +1,33 @@
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  font-family: 'Open Sans', Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 12px;
+}
+.contain {
+  width: 73.125%;
+  margin: 0 auto;
+}
+header ul {
+  list-style-type: none;
+  text-align: right;
+}
+header ul li {
+  display: inline;
+  text-transform: uppercase;
+  padding-left: 1.833em;
+}
+header ul a {
+  text-decoration: none;
+  color: #414141;
+}
+.highlight {
+  color: #f36b47;
+}

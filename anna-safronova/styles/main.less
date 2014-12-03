@@ -1,0 +1,57 @@
+// ------------- import less files -------------
+
+@import "var.less";
+@import "mixins.less";
+
+// ------------- global styles -------------
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+	width: @total-width;
+	font-family: @main-font;
+	font-size: @base-size;
+}
+
+
+
+.contain {
+	width: @container-width;
+	margin: 0 auto;
+}
+
+
+// ================ navigation ================
+header {
+	//float: left;
+
+	ul {
+		list-style-type: none;
+		text-align: right;
+		li {
+			display: inline;
+			text-transform: uppercase;
+			padding-left: 1.833em;
+
+
+		}
+
+		a {
+			text-decoration: none;
+			color: @dark;
+		}
+	}
+
+
+}
+
+.highlight {
+	color: @brand-color;
+}
+
