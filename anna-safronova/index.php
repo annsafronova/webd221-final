@@ -1,6 +1,6 @@
 	<?php 
 	  $page_title = "UIBrush Agency";
-	  include 'header.php';
+	  include 'inc/header.php';
 	?>
 	
 	<!-- ======== slider ========= -->
@@ -12,7 +12,6 @@
 			<h1>Welcome to UIBrush</h1><br>
 			<h4>We Provide Ultimate Free PSD Templates</h4>
 		</div><!--  /contain -->
-		
 	</section>
 	
 	<!-- ======== important note ========= -->
@@ -50,8 +49,7 @@
 				<i class="fa fa-phone"></i>
 				<h4>Best Support</h4>
 				<h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore eturet dolore magna aliqua. </h6>
-			</div>
-
+			</div><!--  /block -->
 		</div> <!-- /contain -->	
 	</section>
 	
@@ -66,7 +64,6 @@
 				<p>Portfolio One</p>
 				<h6>Lorem ipsum dolor sit amet.</h6>
 			</a>
-			
 
 			<a href="#" class="card">
 				<img src="img/card-2.jpg" alt="Project Image">
@@ -88,5 +85,5 @@
 		</div><!-- /contain -->
 	</section>
 
-	<?php include "footer.php"; ?> 
+	<?php include "inc/footer.php"; ?> 
 	
