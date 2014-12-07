@@ -1,11 +1,8 @@
-
 // ------------- import less files -------------
-
 @import "var.less";
 @import "mixins.less";
 
 // ------------- global styles -------------
-
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -21,43 +18,33 @@ body {
 	line-height: @line;
 }
 
+// ------------- typography -------------
 h1 {
 	margin-bottom: 0.32em;
 	font-size: @h1;
 	text-align: center;
 }
 
-h2 {
-	font-size: @h2;
+h2, h4, h6 {
 	font-weight: 400;
 }
 
-h3 {
-	font-size: @h3;
-}
+h2 { font-size: @h2; }
 
-h4 {
-	font-size: @h4;
-	font-weight: 400;
-}
+h3 { font-size: @h3; }
 
-h5 {
-	font-size: @h5;
-}
+h4 { font-size: @h4; }
 
-h6 {
-	font-size: @h6;
-	font-weight: 400;
-}
+h5 { font-size: @h5; }
+
+h6 { font-size: @h6; }
 
 a {
 	color: @dark;
 	text-decoration: none;
 }
 
-p {
-	margin-top: 0.5em;
-}
+p { margin-top: 0.5em; }
 
 .contain {
 	margin: 0 auto;
@@ -72,11 +59,7 @@ p {
 	content: " ";
 }
 
-
-// --------------- home page ---------------
-
-// --------------- navigation ---------------
-
+// --------------- homepage: navigation ---------------
 header {
 	position: fixed;
 	width: @total-width;
@@ -105,9 +88,7 @@ header {
 	}
 }
 
-.fa-bars {
-	display: none;
-}
+.fa-bars { display: none; }
 
 @-webkit-keyframes fadeInUp {
   0% {
@@ -149,9 +130,7 @@ header {
 	}
 }
 
-.highlight {
-	color: @brand-color;
-}
+.highlight { color: @brand-color; }
 
 .heading {
 	display: inline-block;
@@ -160,8 +139,7 @@ header {
 	border-bottom: 2px solid @brand-color;
 }
 
-// --------------- slider ---------------
-
+// --------------- slider section ---------------
 .slider {
 	float: left;
 	width: @total-width;
@@ -185,25 +163,20 @@ header {
 		background-color: rgba(0, 0, 0, 0.4);
 	}
 
-	h1 {
-		margin-top: 0.400em;
-	}
+	h1 { margin-top: 0.400em; }
 
-	h4 {
-		margin: 0.667em;
-	}
+	h4 { margin: 0.667em; }
 }
 
 #back {
-	.arrow(@float:left);
+	.arrow(@float: left);
 }
 
 #next {
-	.arrow(@float:right);
+	.arrow(@float: right);
 }
 
-// --------------- important note ---------------
-
+// --------------- important note section ---------------
 #important {
 	.section();
 	background-color: @brand-color;
@@ -211,10 +184,7 @@ header {
 	text-align: center;
 
 	h2,
-	h4 {
-		display: inline-block;
-		
-	}
+	h4 { display: inline-block; }
 
 	a {
 		color: @white;
@@ -223,21 +193,16 @@ header {
 	}
 }
 
-// --------------- features ---------------
-
+// --------------- features section ---------------
 #features {
 	float: left;
 	padding: 1em 0 1em 0;
 	text-align: center;
 
 	p,
-	h6 {
-		color: @gray;
-	}
+	h6 { color: @gray; }
 
-	h4 {
-		margin: 0.5em 0;
-	}
+	h4 { margin: 0.5em 0; }
 
 	.fa {
 		font-size: 1.875em;
@@ -257,8 +222,7 @@ header {
 	}
 }
 
-// --------------- recent projects ---------------
-
+// --------------- recent projects section ---------------
 #projects {
 	.section();
 	color: @gray;
@@ -278,9 +242,7 @@ header {
 	border: 1px solid @concrete;
 	text-align: right;
 
-	h6 {
-		margin: 0.667em 0.867em;
-	}
+	h6 { margin: 0.667em 0.867em; }
 
 	p {
 		padding-bottom: 5px;
@@ -297,7 +259,6 @@ header {
 }
 
 // --------------- footer ---------------
-
 footer {
 	.section();
 	margin-top: 3em;
@@ -307,17 +268,13 @@ footer {
 	background-color: @brand-color;
 }
 
-// --------------- about page ---------------
-
-// --------------- slider ---------------
-
+// --------------- about page: slider section ---------------
 #about-slider {
 	.slider-text();
 	.bg(@url: "../img/slider-2.jpg");
 }
 
-// --------------- about ---------------
-
+// --------------- about section ---------------
 #about {
 	.section();
 	padding-bottom: 2em;
@@ -325,8 +282,7 @@ footer {
 	text-align: center;
 }
 
-// --------------- team ---------------
-
+// --------------- team section ---------------
 #team {
 	.border();
 	.section();
@@ -346,9 +302,7 @@ footer {
 	.box();
 	padding: 1.5em 0;
 
-	p {
-		margin-top: 0;
-	}
+	p { margin-top: 0; }
 
 	h6 {
 		margin-top: 1.8em;
@@ -362,8 +316,7 @@ footer {
 	}
 }
 
-// --------------- mission ---------------
-
+// --------------- mission section ---------------
 #mission {
 	.section();
 
@@ -386,18 +339,13 @@ footer {
 	width: 49%;
 }
 
-
-// --------------- services page ---------------
-
-// --------------- slider ---------------
-
+// --------------- services page: slider ---------------
 #services-slider {
 	.slider-text();
 	.bg(@url: "../img/slider-3.jpg");
 }
 
-// --------------- services ---------------
-
+// --------------- services section ---------------
 #services {
 	.section();
 	text-align: center;
@@ -434,41 +382,25 @@ footer {
 		text-transform: uppercase;
 	}
 
-	p {
-		text-align: left;
-	}
+	p { text-align: left; }
+	
+	a {	color: @brand-color;
 
-	a {
-		color: @brand-color;
-
-		&:hover {
-			color: lighten(@brand-color, 10%)
-		}
+		&:hover { color: lighten(@brand-color, 10%) }
 	}
 }
 
-.cards {
-	float: left;
-}
+.cards { float: left; }
 
-.fa-paint-brush {
-	color: @pink;
-}
+.fa-paint-brush { color: @pink; }
 
-.fa-html5 {
-	color: @orange;
-}
+.fa-html5 { color: @orange; }
 
-.fa-css3 {
-	color: @cyan;
-}
+.fa-css3 { color: @cyan; }
 
-.fa-wordpress {
-	color: @brown;
-}
+.fa-wordpress { color: @brown; }
 
-// --------------- show ---------------
-
+// --------------- show section ---------------
 #show {
 	.section();
 	.border();
@@ -497,18 +429,12 @@ footer {
 		color: @dark;
 		list-style-image: url(/img/tick.png);
 
-		li {
-			padding-left: 0.6em;
-		}
+		li { padding-left: 0.6em; }
 	}
-
-	.text {
-		float: right;
-	}
+	.text { float: right; }
 }
 
-// --------------- clients ---------------
-
+// --------------- clients section ---------------
 #clients {
 	.section();
 	text-align: center;
