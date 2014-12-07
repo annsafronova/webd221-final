@@ -11,9 +11,7 @@
 
     	$('#menu li').click(function() {
 	      $.panelslider.close();
-	      console.log( "ready!" );
 	    });
-	    
 	});   
 
 	var str=location.href.toLowerCase();	
@@ -24,9 +22,6 @@
 			$(this).addClass("current");
 		}
 	});
-
-
-
 </script>
 </body>
 </html>
