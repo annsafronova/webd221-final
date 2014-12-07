@@ -1,3 +1,4 @@
+
 // ------------- import less files -------------
 
 @import "var.less";
@@ -17,41 +18,519 @@ body {
 	width: @total-width;
 	font-family: @main-font;
 	font-size: @base-size;
+	line-height: @line;
 }
 
+h1 {
+	margin-bottom: 0.32em;
+	font-size: @h1;
+	text-align: center;
+}
 
+h2 {
+	font-size: @h2;
+	font-weight: 400;
+}
+
+h3 {
+	font-size: @h3;
+}
+
+h4 {
+	font-size: @h4;
+	font-weight: 400;
+}
+
+h5 {
+	font-size: @h5;
+}
+
+h6 {
+	font-size: @h6;
+	font-weight: 400;
+}
+
+a {
+	color: @dark;
+	text-decoration: none;
+}
+
+p {
+	margin-top: 0.5em;
+}
 
 .contain {
-	width: @container-width;
 	margin: 0 auto;
+	width: @container-width;
+}
+
+.clearfix:after {
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+	content: " ";
 }
 
 
-// ================ navigation ================
+// --------------- home page ---------------
+
+// --------------- navigation ---------------
+
 header {
-	//float: left;
-
-	ul {
-		list-style-type: none;
-		text-align: right;
-		li {
-			display: inline;
-			text-transform: uppercase;
-			padding-left: 1.833em;
-
-
-		}
-
-		a {
-			text-decoration: none;
-			color: @dark;
-		}
+	position: fixed;
+	width: @total-width;
+	background-color: @white;
+	z-index: 500;
+	
+	#logo {
+		float: left;
+		width: 20%;
+		margin: 1.27em 0;
+		font-weight: 400;
 	}
 
+	ul {
+		float: right;
+		margin: 2em 0;
+		list-style-type: none;
 
+		li {
+			display: inline-block;
+			padding-left: 1.833em;
+			font-size: @base-size - 1;
+			font-weight: 600;
+			text-transform: uppercase;
+		}
+	}
+}
+
+.fa-bars {
+	display: none;
+}
+
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+  }
+}
+
+.nav-items {
+	position: relative;
+	padding-bottom: 0.2em;
+
+	&:hover,
+	&.current {
+		border-bottom: 2px solid @brand-color;
+
+		&:after {
+			position: absolute;
+			top: 100%;
+			left: 50%;
+			width: 0;
+			height: 0;
+			margin-left: -7px;
+			content: " ";
+			border: solid transparent;
+			border-color: rgba(136, 183, 213, 0);
+			border-width: 7px;
+			border-top-color: @brand-color;
+
+			-webkit-animation-name: fadeInUp;
+			-webkit-animation-duration: .6s;
+			-webkit-animation-fill-mode: both;
+		}
+	}
 }
 
 .highlight {
 	color: @brand-color;
 }
+
+.heading {
+	display: inline-block;
+	font-weight: 600;
+	color: @dark;
+	border-bottom: 2px solid @brand-color;
+}
+
+// --------------- slider ---------------
+
+.slider {
+	float: left;
+	width: @total-width;
+	margin-top: 5.892em;
+	height: 30em;
+	color: @silver;
+	text-align: center;
+}
+
+#main-slider {
+	.bg(@url: "../img/1.jpg");
+	padding-top: 13.000em;
+	height: 32.500em;
+	line-height: 1;
+	
+	h1,
+	h4 {
+		display: inline-block;
+		padding: 16px 60px;
+		font-weight: 400;
+		background-color: rgba(0, 0, 0, 0.4);
+	}
+
+	h1 {
+		margin-top: 0.400em;
+	}
+
+	h4 {
+		margin: 0.667em;
+	}
+}
+
+#back {
+	.arrow(@float:left);
+}
+
+#next {
+	.arrow(@float:right);
+}
+
+// --------------- important note ---------------
+
+#important {
+	.section();
+	background-color: @brand-color;
+	color: @white;
+	text-align: center;
+
+	h2,
+	h4 {
+		display: inline-block;
+		
+	}
+
+	a {
+		color: @white;
+		text-transform: uppercase;
+		text-decoration: underline;
+	}
+}
+
+// --------------- features ---------------
+
+#features {
+	float: left;
+	padding: 1em 0 1em 0;
+	text-align: center;
+
+	p,
+	h6 {
+		color: @gray;
+	}
+
+	h4 {
+		margin: 0.5em 0;
+	}
+
+	.fa {
+		font-size: 1.875em;
+		color: @brand-color;
+	}
+}
+
+.block {
+	.box();
+	padding: 0 1.333em;
+	margin-top: 4.000em;
+
+	h6 {
+		margin: 0;
+		line-height: 1.5;
+		text-align: left;
+	}
+}
+
+// --------------- recent projects ---------------
+
+#projects {
+	.section();
+	color: @gray;
+	text-align: center;
+
+	.contain > p {
+		margin: 1em auto 1.6em auto;
+		width: 60%;
+	}
+}
+
+.card {
+	.box();
+	width: 21.53%;
+	margin: 0 4.1% 1.9em 0;
+	background-color: @cloud;
+	border: 1px solid @concrete;
+	text-align: right;
+
+	h6 {
+		margin: 0.667em 0.867em;
+	}
+
+	p {
+		padding-bottom: 5px;
+		margin: 0 0.867em;
+		line-height: 1;
+		color: @brand-color;
+		border-bottom: 1px solid @concrete;
+	}
+
+	img {
+		max-width: 100%;
+		background-size: cover;
+	}
+}
+
+// --------------- footer ---------------
+
+footer {
+	.section();
+	margin-top: 3em;
+	font-size: @base-size - 2;
+	color: @white;
+	text-align: center;
+	background-color: @brand-color;
+}
+
+// --------------- about page ---------------
+
+// --------------- slider ---------------
+
+#about-slider {
+	.slider-text();
+	.bg(@url: "../img/slider-2.jpg");
+}
+
+// --------------- about ---------------
+
+#about {
+	.section();
+	padding-bottom: 2em;
+	color: @gray;
+	text-align: center;
+}
+
+// --------------- team ---------------
+
+#team {
+	.border();
+	.section();
+	line-height: 1.5;
+	color: @gray;
+	text-align: center;
+	background-color: @smoke;
+
+	img {
+		width: 67%;
+		border: 1px solid @concrete;
+		border-radius: 50%;
+	}
+}
+
+.member-card {
+	.box();
+	padding: 1.5em 0;
+
+	p {
+		margin-top: 0;
+	}
+
+	h6 {
+		margin-top: 1.8em;
+		line-height: @line;
+	}
+
+	h5 {
+		margin-top: 0.4em;
+		font-weight: 600;
+		color: @dark;
+	}
+}
+
+// --------------- mission ---------------
+
+#mission {
+	.section();
+
+	h6 {
+		margin: 15px 0 0 0;
+		font-size: @h6 + .075;
+		line-height: 1.5;
+		color: @gray;
+	}
+
+	img {
+		float: left;
+		width: 48%;
+		margin: 2em 0 3.688em 3%;
+	}
+}
+
+.text {
+	float: left;
+	width: 49%;
+}
+
+
+// --------------- services page ---------------
+
+// --------------- slider ---------------
+
+#services-slider {
+	.slider-text();
+	.bg(@url: "../img/slider-3.jpg");
+}
+
+// --------------- services ---------------
+
+#services {
+	.section();
+	text-align: center;
+	color: @gray;
+}
+
+.service-card {
+	.box();
+	position: relative;
+	padding: 1em 0.938em;
+	margin-top: 3.9em;
+	border: 1px solid @concrete;
+
+	.fa {
+		position: absolute;
+		top: -1em;
+		right: 0;
+		left: 0;
+		width: 2em;
+		height: 2em;
+		padding: 0.5em;
+		margin: 0 auto;
+		font-size: 1.625em;
+		text-align: center;
+		background-color: @white;
+		border: 1px solid @concrete;
+		border-radius: 50%;
+	}
+
+	h5 {
+		margin: 1.3em 0 0.8em 0;
+		font-weight: 600;
+		color: @dark;
+		text-transform: uppercase;
+	}
+
+	p {
+		text-align: left;
+	}
+
+	a {
+		color: @brand-color;
+
+		&:hover {
+			color: lighten(@brand-color, 10%)
+		}
+	}
+}
+
+.cards {
+	float: left;
+}
+
+.fa-paint-brush {
+	color: @pink;
+}
+
+.fa-html5 {
+	color: @orange;
+}
+
+.fa-css3 {
+	color: @cyan;
+}
+
+.fa-wordpress {
+	color: @brown;
+}
+
+// --------------- show ---------------
+
+#show {
+	.section();
+	.border();
+	padding-bottom: 2em;
+	margin-top: 4em;
+	color: @gray;
+	background-color: @smoke;
+
+	img {
+		float: left;
+		width: 50%;
+	}
+
+	h5 {
+		margin-top: 0.9em;
+		font-weight: 600;
+		color: @dark;
+		text-transform: uppercase;
+	}
+
+	ul {
+		padding-left: 1.5em;
+		margin-top: 2.05em;
+		font-size: @h6;
+		line-height: 2.1;
+		color: @dark;
+		list-style-image: url(/img/tick.png);
+
+		li {
+			padding-left: 0.6em;
+		}
+	}
+
+	.text {
+		float: right;
+	}
+}
+
+// --------------- clients ---------------
+
+#clients {
+	.section();
+	text-align: center;
+	img {
+		width: 60%;
+	}
+}
+
+.company {
+	.box();
+
+	img {
+		width: 95%;
+		margin-top: 1em;
+	}
+}
+
+
+
+
+
+
+
+
 

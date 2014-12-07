@@ -1,0 +1,153 @@
+@media (max-width: 987px) {
+  .contain {
+    width: 95%;
+  }
+  #features p {
+    line-height: 2;
+  }
+  .service-card {
+    width: 49%;
+    margin-right: 2%;
+    padding: 1.5em;
+    margin-bottom: 1em;
+  }
+  .service-card:nth-child(even) {
+    margin-right: 0;
+  }
+}
+@media (max-width: 759px) {
+  .slider,
+  #main-slider {
+    height: 18em;
+  }
+  #main-slider {
+    padding-top: 4em;
+  }
+  .fa-bars {
+    display: block;
+    float: right;
+    margin-top: 0.9em;
+    font-size: 2em;
+  }
+  #menu {
+    position: fixed;
+    right: 0;
+    z-index: 500;
+    display: none;
+    width: 220px;
+    height: 100vh;
+    background-color: #414141;
+    margin-top: 0;
+    color: #ffffff;
+    padding-left: 0;
+  }
+  #menu li {
+    display: block;
+    padding-left: 0;
+    margin: 2em;
+    text-align: left;
+  }
+  #menu li a {
+    color: #ffffff;
+  }
+  #menu li a:hover,
+  #menu li a:hover:after {
+    border: none;
+  }
+  #important h4,
+  #important h2 {
+    margin: 0.5em;
+  }
+  .block {
+    width: 49%;
+    margin-right: 2%;
+  }
+  .block:nth-child(even) {
+    margin-right: 0;
+  }
+  #projects .contain > p {
+    width: 100%;
+  }
+  .card {
+    width: 49%;
+    margin-right: 2%;
+    margin-top: 1em;
+  }
+  .card:nth-child(even) {
+    margin-right: 0;
+  }
+  #about-slider,
+  #services-slider {
+    padding-top: 2em;
+  }
+  #about-slider h1,
+  #services-slider h1 {
+    font-size: 2.34375em;
+  }
+  #about-slider p,
+  #services-slider p {
+    width: 100%;
+    line-height: 1.5em;
+  }
+  .member-card {
+    width: 49%;
+    margin-right: 2%;
+  }
+  .member-card:nth-child(even) {
+    margin-right: 0;
+  }
+  #mission img {
+    width: 100%;
+    margin-left: 0;
+    clear: both;
+  }
+  #mission .text {
+    width: 100%;
+  }
+  #services p {
+    line-height: 2;
+  }
+  #show img {
+    width: 100%;
+  }
+  #show .text {
+    float: left;
+    width: 100%;
+  }
+}
+@media (max-width: 465px) {
+  .contain {
+    width: 90%;
+  }
+  #features p,
+  #about p,
+  #services p {
+    text-align: left;
+  }
+  #main-slider h1,
+  #main-slider h4 {
+    padding: 10px;
+    font-size: 1.25em;
+  }
+  #about-slider p,
+  #services-slider p {
+    width: 100%;
+  }
+  #important h4,
+  #important h2 {
+    font-size: 15px;
+  }
+  .block,
+  .card,
+  .member-card,
+  .service-card {
+    width: 100%;
+  }
+  .company {
+    width: 49%;
+    margin-right: 2%;
+  }
+  .company:nth-child(even) {
+    margin-right: 0;
+  }
+}

@@ -1,3 +1,62 @@
 // ------------- import less files ------------- 
 
-@import "variables.less";
+@import "var.less";
+
+// ------------- mixins ------------- 
+
+.bg(@url) {
+	background: url(@url) no-repeat;
+	background-size: cover;
+}
+
+.arrow(@float) {
+	float: @float;
+	opacity: 0.6;
+}
+
+.box() {
+	display: block;
+	float: left;
+	width: 23%;
+	margin-right: 2.5%; 
+
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+.mq-box() {
+	width: 49%;
+	margin-right: 2%; 
+
+	&:nth-child(even) {
+		margin-right: 0;
+	}
+}
+
+.section(){
+	float: left;
+	width: @total-width;
+	padding: 0.5em 0;
+}
+
+.slider-text() {
+	padding-top: 8.125em;
+
+	h1 {
+		margin-top: 0;
+		font-size: @large-size;
+		line-height: 1;
+	}
+
+	p {
+		width: 83.50%;
+		margin: 0 auto;
+		line-height: 2;
+	}
+}
+
+.border() {
+	border-top: 1px solid @concrete;
+	border-bottom: 1px solid @concrete;
+}
